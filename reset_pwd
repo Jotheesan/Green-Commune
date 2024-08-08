@@ -1,0 +1,160 @@
+import 'package:flutter/material.dart';
+
+class LoginScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          Container(
+            color: Colors.white.withOpacity(0.7),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(padding: EdgeInsets.only(top: 40.0)),
+                Row(
+                  children: [
+                    Row(
+                      children: [
+                        Row(children: [
+                          Text(
+                            'G',
+                            style: TextStyle(
+                                fontSize: 30.0,
+                                color: Colors.green,
+                                fontStyle: FontStyle.italic,
+                                fontWeight: FontWeight.w800),
+                          ),
+                          Text(
+                            'reen',
+                            style: TextStyle(
+                                fontSize: 30.0,
+                                color: Colors.brown,
+                                fontStyle: FontStyle.italic,
+                                fontWeight: FontWeight.w800),
+                          )
+                        ]),
+                      ],
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Row(children: [
+                      Text(
+                        'C',
+                        style: TextStyle(
+                            fontSize: 30.0,
+                            color: Colors.green,
+                            fontStyle: FontStyle.italic,
+                            fontWeight: FontWeight.w800),
+                      ),
+                      Text(
+                        'ommune',
+                        style: TextStyle(
+                            fontSize: 30.0,
+                            color: Colors.brown,
+                            fontStyle: FontStyle.italic,
+                            fontWeight: FontWeight.w800),
+                      ),
+                    ]),
+                  ],
+                ),
+                Padding(padding: EdgeInsets.only(top: 40.0)),
+                Text(
+                  'Reset Your Password',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                    fontSize: 30,
+                    color: Colors.black87,
+                    fontWeight: FontWeight.w400,
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
+                SizedBox(
+                  height: 32,
+                ),
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      'New Password',
+                      style: TextStyle(color: Colors.brown, fontSize: 20),
+                    ),
+                  ],
+                ),
+                Padding(padding: EdgeInsets.only(bottom: 10.0)),
+                TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.grey.withOpacity(0.3),
+                    hintStyle: TextStyle(
+                        color: Colors.grey, fontStyle: FontStyle.italic),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(0.0),
+                      borderSide: BorderSide.none,
+                    ),
+                    contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+                  ),
+                ),
+                Padding(padding: EdgeInsets.only(top: 20)),
+                Text(
+                  'Confirm Password',
+                  style: TextStyle(fontSize: 20, color: Colors.brown),
+                ),
+                Padding(padding: EdgeInsets.only(bottom: 10)),
+                TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.grey.withOpacity(0.3),
+                    hintStyle: TextStyle(
+                        color: Colors.grey, fontStyle: FontStyle.italic),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(0.0),
+                      borderSide: BorderSide.none,
+                    ),
+                    contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+                  ),
+                ),
+                Padding(padding: EdgeInsets.only(bottom: 30)),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TextButton(
+                      onPressed: () {
+                        // Implement your login logic here
+                      },
+                      style: TextButton.styleFrom(
+                        backgroundColor: Colors.green,
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 50, vertical: 10),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
+                      ),
+                      child: Text(
+                        'Save',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
